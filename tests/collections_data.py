@@ -27,3 +27,65 @@ is_iter_data = [
     (True, False),
     (False, False)
 ]
+
+
+class Obj1:
+    __i: int
+    __s: str
+    __d: dict
+    __l: list
+
+    def __init__(self, i, s, d, l):
+        self.__i = i
+        self.__s = s
+        self.__d = d
+        self.__l = l
+
+
+class Obj2:
+    __t: tuple
+    __o_1: Obj1
+
+    def __init__(self, t, o_1):
+        self.__t = t
+        self.__o_1 = o_1
+
+
+class Obj3:
+    __set: set
+    __o_2: Obj2
+
+    def __init__(self, set_, o_2):
+        self.__set = set_
+        self.__o_2 = o_2
+
+
+obj_1 = Obj1(1, 's', {'k': 'v'}, [1, 's', {'k': 'v'}])
+obj_2 = Obj2((1, 's', {'k': 'v'}), obj_1)
+obj_3 = Obj3({1, 's', 'v'}, obj_2)
+
+obj_3_dict = {
+    '_Obj3__set': {1, 's', 'v'},
+    '_Obj3__o_2': {
+        '_Obj2__t': (1, 's', {'k': 'v'}),
+        '_Obj2__o_1': {
+            '_Obj1__i': 1,
+            '_Obj1__s': 's',
+            '_Obj1__d': {'k': 'v'},
+            '_Obj1__l': [1, 's', {'k': 'v'}]
+        }
+    }
+}
+
+object_to_deep_collection_data = [
+    (obj_3, obj_3_dict),
+    ({'1': 1, '2': 's', '3': {'k': 'v'}, '4': [1, 's', {'k': 'v'}]},
+     {'1': 1, '2': 's', '3': {'k': 'v'}, '4': [1, 's', {'k': 'v'}]}),
+    ([1, 's', {'k': 'v'}], [1, 's', {'k': 'v'}]),
+    ((1, 's', {'k': 'v'}), (1, 's', {'k': 'v'})),
+    ({1, 's', 'v'}, {1, 's', 'v'}),
+    (1, 1),
+    ('s', 's'),
+    ({'a': 1, 'b': {'c': 'cc', 'o': obj_3}},
+     {'a': 1, 'b': {'c': 'cc', 'o': obj_3_dict}})
+]

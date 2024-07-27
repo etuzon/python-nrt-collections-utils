@@ -16,11 +16,11 @@
 
 ### Methods
 
-| **Method**          | **Description**                        | **Parameters**                        | **Returns**                               |
-|---------------------|----------------------------------------|---------------------------------------|-------------------------------------------|
-| `deep_args_to_list` | Flat deep structure arguments to list. | `args (tuple)` The arguments to flat. | `list` A flatten list.                    |
-| `is_iter`           | Check if object is iterable.           | `obj` The object to check.            | `bool` True if iterable, False otherwise. |
-
+| **Method**                  | **Description**                        | **Parameters**                        | **Returns**                                 |
+|-----------------------------|----------------------------------------|---------------------------------------|---------------------------------------------|
+| `deep_args_to_list`         | Flat deep structure arguments to list. | `args (tuple)` The arguments to flat. | `list` A flatten list.                      |
+| `is_iter`                   | Check if object is iterable.           | `obj` The object to check.            | `bool` True if iterable, False otherwise.   |
+| `object_to_deep_collection` | Convert object to deep collection.     | `obj` The object to convert.          | `dict, list, set, tuple` A deep collection. |
 ### Examples:
 
 - #### CollectionsUtil.deep_args_to_list
