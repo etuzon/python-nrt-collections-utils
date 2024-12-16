@@ -1,5 +1,9 @@
 # nrt-collections-utils
 
+## Version 1.0.2
+
+Support Python 3.13.
+
 ## Version 1.0.1
 
 Add `object_to_deep_collection` method to `CollectionsUtil` class.
