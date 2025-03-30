@@ -27,6 +27,8 @@ setup(
     url='https://github.com/etuzon/python-nrt-collections-utils',
     packages=['nrt_collections_utils'],
     classifiers=[
+        'Development Status :: 5 - Production/Stable',
+        'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
@@ -34,9 +36,8 @@ setup(
         'Programming Language :: Python :: 3.11',
         'Programming Language :: Python :: 3.12',
         'Programming Language :: Python :: 3.13',
-        'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
     ],
     install_requires=[requirements],
-    data_files=[('', ['requirements.txt'])],
+    data_files=[('', ['requirements.txt'])]
 )
