@@ -22,7 +22,7 @@ class ListUtil:
 
     @staticmethod
     def remove_empty(list_: list):
-        return [o for o in list_ if o or isinstance(o, int) or isinstance(o, float)]
+        return [o for o in list_ if o or isinstance(o, (int, float))]
 
     @staticmethod
     def remove_duplicates(list_: list):
