@@ -18,7 +18,11 @@ class ListUtil:
 
     @staticmethod
     def remove_none(list_: list):
-        return [x for x in list_ if x is not None]
+        return [o for o in list_ if o is not None]
+
+    @staticmethod
+    def remove_empty(list_: list):
+        return [o for o in list_ if o or isinstance(o, (int, float))]
 
     @staticmethod
     def remove_duplicates(list_: list):

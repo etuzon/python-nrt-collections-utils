@@ -57,11 +57,12 @@
 
 ### Methods
 
-| **Method**          | **Description**     | **Parameters**                                      | **Returns**                                      |
-|---------------------|---------------------|-----------------------------------------------------|--------------------------------------------------|
-| `compare_lists`     | Compare two lists.  | `list_1 (list)` List 1.<br>`list_2 (list)` List 2.  | `bool` True if lists are equal, False otherwise. |
-| `remove_none`       | Remove None values. | `list_ (list)` The list to remove None values from. | `list` The list without None values.             |
-| `remove_duplicates` | Remove duplicates.  | `list_ (list)` The list to remove duplicates from.  | `list` The list without duplicates.              |
+| **Method**          | **Description**      | **Parameters**                                       | **Returns**                                      |
+|---------------------|----------------------|------------------------------------------------------|--------------------------------------------------|
+| `compare_lists`     | Compare two lists.   | `list_1 (list)` List 1.<br>`list_2 (list)` List 2.   | `bool` True if lists are equal, False otherwise. |
+| `remove_none`       | Remove None values.  | `list_ (list)` The list to remove None values from.  | `list` The list without None values.             |
+| `remove_duplicates` | Remove duplicates.   | `list_ (list)` The list to remove duplicates from.   | `list` The list without duplicates.              |
+| `remove_empty`      | Remove empty values. | `list_ (list)` The list to remove empty values from. | `list` The list without empty values.            |
 
 ### Examples:
 
@@ -69,7 +70,7 @@
 
     **Code**
     ```python
-    from collections_utils import ListUtil
+    from list_utils import ListUtil
 
     # Compare two lists
     print(ListUtil.compare_lists([1, 3, 2], [1, 2, 3]))
@@ -85,7 +86,7 @@
 
     **Code**
     ```python
-    from collections_utils import ListUtil
+    from list_utils import ListUtil
 
     # Remove None values
     print(ListUtil.remove_none([1, None, 2, None, 3]))
@@ -99,7 +100,7 @@
 
     **Code**
     ```python
-    from collections_utils import ListUtil
+    from list_utils import ListUtil
 
     # Remove duplicates
     print(ListUtil.remove_duplicates([1, 2, 3, 1, 2, 3]))
@@ -107,4 +108,42 @@
     **Output**
     ```
     [1, 2, 3]
+    ```
+  
+- #### ListUtil.remove_empty
+
+    **Code**
+    ```python
+    from list_utils import ListUtil
+
+    # Remove empty values
+    print(ListUtil.remove_empty([1, '', 2, None, 3, '']))
+    ```
+    **Output**
+    ```
+    [1, 2, 3]
+    ```
+
+## DictUtil class
+
+### Methods
+
+| **Method**  | **Description**      | **Parameters**                                                                                                                                     | **Returns**      |
+|-------------|----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|------------------|
+| `get_value` | Get value from dict. | `dict_ (dict)` The dict to get value from.<br>`path [str, list]` The path to the value.<br>`default_value` Default value in case the value is None | `Any` The value. |
+
+### Examples:
+
+- #### DictUtil.get_value
+
+    **Code**
+    ```python
+    from dict_utils import DictUtil
+
+    # Get value from dict
+    print(DictUtil.get_value({'a': {'b': {'c': 1}}}, ['a', 'b', 'c']))
+    ```
+    **Output**
+    ```
+    1
     ```
