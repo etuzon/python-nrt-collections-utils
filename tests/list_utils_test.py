@@ -10,10 +10,19 @@ def test_compare_lists(list_1, list_2, expected_result):
 
 
 def test_remove_none():
-    assert ListUtil.remove_none([1, None, 2, None, 3]) == [1, 2, 3]
+    assert ListUtil.remove_none([0, 1, None, 2, None, 3]) == [0, 1, 2, 3]
     assert ListUtil.remove_none([None, None, None]) == []
-    assert ListUtil.remove_none([1, 2, 3]) == [1, 2, 3]
+    assert ListUtil.remove_none([-1, 0, 1, 2, 3]) == [-1, 0, 1, 2, 3]
     assert ListUtil.remove_none([]) == []
+    assert ListUtil.remove_none([0.0]) == [0.0]
+
+
+def test_remove_empty():
+    assert ListUtil.remove_empty([1, None, 2, '', 3, 0]) == [1, 2, 3, 0]
+    assert ListUtil.remove_empty([None, '', None]) == []
+    assert ListUtil.remove_empty([-1, 0, 1, 2, 3]) == [-1, 0, 1, 2, 3]
+    assert ListUtil.remove_empty([]) == []
+    assert ListUtil.remove_empty([0.0]) == [0.0]
 
 
 def test_remove_duplicates():

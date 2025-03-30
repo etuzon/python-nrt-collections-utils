@@ -1,5 +1,10 @@
 # nrt-collections-utils
 
+## Version 1.0.3
+
+Add `remove_empty` method to `ListUtil` class.
+Add `get_value` method to `DictUtil` class.
+
 ## Version 1.0.2
 
 Support Python 3.13.
