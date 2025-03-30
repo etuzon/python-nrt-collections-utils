@@ -27,7 +27,7 @@
 
     **Code**
     ```python
-    from collections_utils import CollectionsUtil
+    from nrt_collections_utils.collections_utils import CollectionsUtil
 
     # Flat deep structure arguments to list
     flat_args = CollectionsUtil.deep_args_to_list(1, 2, (3, 4, (5, 6, (7, 8, 9))))
@@ -41,7 +41,7 @@
 
   **Code**
     ```python
-    from collections_utils import CollectionsUtil
+    from nrt_collections_utils.collections_utils import CollectionsUtil
 
     # Check if object is iterable
     print(CollectionsUtil.is_iter(1))
@@ -70,7 +70,7 @@
 
     **Code**
     ```python
-    from list_utils import ListUtil
+    from nrt_collections_utils.list_utils import ListUtil
 
     # Compare two lists
     print(ListUtil.compare_lists([1, 3, 2], [1, 2, 3]))
@@ -86,7 +86,7 @@
 
     **Code**
     ```python
-    from list_utils import ListUtil
+    from nrt_collections_utils.list_utils import ListUtil
 
     # Remove None values
     print(ListUtil.remove_none([1, None, 2, None, 3]))
@@ -100,7 +100,7 @@
 
     **Code**
     ```python
-    from list_utils import ListUtil
+    from nrt_collections_utils.list_utils import ListUtil
 
     # Remove duplicates
     print(ListUtil.remove_duplicates([1, 2, 3, 1, 2, 3]))
@@ -114,7 +114,7 @@
 
     **Code**
     ```python
-    from list_utils import ListUtil
+    from nrt_collections_utils.list_utils import ListUtil
 
     # Remove empty values
     print(ListUtil.remove_empty([1, '', 2, None, 3, '']))
@@ -138,7 +138,7 @@
 
     **Code**
     ```python
-    from dict_utils import DictUtil
+    from nrt_collections_utils.dict_utils import DictUtil
 
     # Get value from dict
     print(DictUtil.get_value({'a': {'b': {'c': 1}}}, ['a', 'b', 'c']))
