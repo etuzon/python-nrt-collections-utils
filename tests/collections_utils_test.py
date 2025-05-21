@@ -1,7 +1,6 @@
 import pytest
 
-from tests.collections_data import deep_args_data, is_iter_data, \
-    object_to_deep_collection_data
+from tests.collections_data import deep_args_data, is_iter_data, object_to_deep_collection_data
 from nrt_collections_utils.collections_utils import CollectionsUtil
 
 

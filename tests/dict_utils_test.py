@@ -1,5 +1,4 @@
 import pytest
-
 from tests.dict_utils_data import get_value_data
 from nrt_collections_utils.dict_utils import DictUtil
 

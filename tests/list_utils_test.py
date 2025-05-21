@@ -1,7 +1,6 @@
 import pytest
-
 from nrt_collections_utils.list_utils import ListUtil
-from tests.list_utils_data import compare_lists_data
+from tests.list_utils_data import compare_lists_data, intersection_lists_data
 
 
 @pytest.mark.parametrize('list_1, list_2, expected_result', compare_lists_data)
@@ -40,3 +39,9 @@ def test_remove_duplicates():
 
     assert ListUtil.compare_lists(
         ListUtil.remove_duplicates(['a', None, 'b', None]), ['a', None, 'b'])
+
+
+@pytest.mark.parametrize('list_1, list_2, expected_result', intersection_lists_data)
+def test_intersection_list(list_1, list_2, expected_result):
+    intersection_list = ListUtil.get_intersection_list(list_1, list_2)
+    assert ListUtil.compare_lists(intersection_list, expected_result)
