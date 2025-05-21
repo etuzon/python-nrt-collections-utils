@@ -27,3 +27,7 @@ class ListUtil:
     @staticmethod
     def remove_duplicates(list_: list):
         return list(set(list_))
+
+    @staticmethod
+    def get_intersection_list(list_1: list, list_2: list) -> list:
+        return list(set(list_1) & set(list_2))

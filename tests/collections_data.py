@@ -33,13 +33,13 @@ class Obj1:
     __i: int
     __s: str
     __d: dict
-    __l: list
+    __r: list
 
-    def __init__(self, i, s, d, l):
+    def __init__(self, i, s, d, r):
         self.__i = i
         self.__s = s
         self.__d = d
-        self.__l = l
+        self.__r = r
 
 
 class Obj2:
@@ -72,7 +72,7 @@ obj_3_dict = {
             '_Obj1__i': 1,
             '_Obj1__s': 's',
             '_Obj1__d': {'k': 'v'},
-            '_Obj1__l': [1, 's', {'k': 'v'}]
+            '_Obj1__r': [1, 's', {'k': 'v'}]
         }
     }
 }
