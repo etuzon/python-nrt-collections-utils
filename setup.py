@@ -1,7 +1,7 @@
 import os
 from setuptools import setup
-
 import nrt_collections_utils
+
 
 PATH = os.path.dirname(__file__)
 
@@ -17,18 +17,16 @@ setup(
     author='Eyal Tuzon',
     author_email='eyal.tuzon.dev@gmail.com',
     description='Collection utilities in Python',
-    keywords='python python3 python-3 tool tools'
-             ' collection collections utilities utils util'
-             ' nrt nrt-utils collections-utils collections-utilities'
-             ' nrt-collections-utils nrt-collections-utilities'
-             ' list list-utils list-utilities nrt-list-utils nrt-list-utilities',
+    keywords='python python3 python-3 tool tools collection collections utilities utils util'
+             ' nrt nrt-utils collections-utils collections-utilities nrt-collections-utils'
+             ' nrt-collections-utilities list list-utils list-utilities nrt-list-utils'
+             ' nrt-list-utilities',
     long_description_content_type='text/markdown',
     long_description=readme,
     url='https://github.com/etuzon/python-nrt-collections-utils',
     packages=['nrt_collections_utils'],
     classifiers=[
         'Development Status :: 5 - Production/Stable',
-        'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
@@ -36,6 +34,8 @@ setup(
         'Programming Language :: Python :: 3.11',
         'Programming Language :: Python :: 3.12',
         'Programming Language :: Python :: 3.13',
+        'Programming Language :: Python :: 3.14',
+        'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
     ],
     install_requires=[requirements],

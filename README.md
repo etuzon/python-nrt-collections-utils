@@ -57,13 +57,14 @@
 
 ### Methods
 
-| **Method**              | **Description**                | **Parameters**                                       | **Returns**                                      |
-|-------------------------|--------------------------------|------------------------------------------------------|--------------------------------------------------|
-| `compare_lists`         | Compare two lists.             | `list_1 (list)` List 1.<br>`list_2 (list)` List 2.   | `bool` True if lists are equal, False otherwise. |
-| `get_intersection_list` | Get intersection of two lists. | `list_1 (list)` List 1.<br>`list_2 (list)` List 2.   | `list` The intersection of the two lists.        |
-| `remove_none`           | Remove None values.            | `list_ (list)` The list to remove None values from.  | `list` The list without None values.             |
-| `remove_duplicates`     | Remove duplicates.             | `list_ (list)` The list to remove duplicates from.   | `list` The list without duplicates.              |
-| `remove_empty`          | Remove empty values.           | `list_ (list)` The list to remove empty values from. | `list` The list without empty values.            |
+| **Method**              | **Description**                   | **Parameters**                                       | **Returns**                                      |
+|-------------------------|-----------------------------------|------------------------------------------------------|--------------------------------------------------|
+| `compare_lists`         | Compare two lists.                | `list_1 (list)` List 1.<br>`list_2 (list)` List 2.   | `bool` True if lists are equal, False otherwise. |
+| `get_common_elements`   | Get common elements in two lists. | `list_1 (list)` List 1.<br>`list_2 (list)` List 2.   | `list` The common elements in the two lists.     |
+| `get_intersection_list` | Get intersection of two lists.    | `list_1 (list)` List 1.<br>`list_2 (list)` List 2.   | `list` The intersection of the two lists.        |
+| `remove_none`           | Remove None values.               | `list_ (list)` The list to remove None values from.  | `list` The list without None values.             |
+| `remove_duplicates`     | Remove duplicates.                | `list_ (list)` The list to remove duplicates from.   | `list` The list without duplicates.              |
+| `remove_empty`          | Remove empty values.              | `list_ (list)` The list to remove empty values from. | `list` The list without empty values.            |
 
 ### Examples:
 

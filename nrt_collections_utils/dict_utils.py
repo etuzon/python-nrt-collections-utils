@@ -1,9 +1,10 @@
+from typing import Union
 
 
 class DictUtil:
 
     @staticmethod
-    def get_value(dict_: dict, path: [str, list], default_value=None):
+    def get_value(dict_: dict, path: Union[str, list], default_value=None):
 
         if isinstance(path, str):
             return dict_.get(path, default_value)

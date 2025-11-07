@@ -17,6 +17,10 @@ class ListUtil:
         return True
 
     @staticmethod
+    def get_common_elements(list_1: list, list_2: list) -> list:
+        return [item for item in list_1 if item in list_2]
+
+    @staticmethod
     def remove_none(list_: list):
         return [o for o in list_ if o is not None]
 
